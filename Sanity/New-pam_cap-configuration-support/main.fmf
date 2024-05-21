@@ -1,0 +1,32 @@
+summary: 'New pam_cap configuration support in /etc/security/capability.conf is correctly
+    recognized: @group, ^cap_foo, !cap_bar'
+description: ''
+contact: Martin Zelený <mzeleny@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+recommend:
+  - libcap
+duration: 5m
+enabled: true
+tag:
+  - NoRHEL4
+  - NoRHEL5
+  - NoRHEL6
+  - NoRHEL7
+  - TIPpass
+  - Tier2
+  - fedora-wanted
+tier: '2'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1487388
+adjust:
+  - enabled: false
+    when: distro < rhel-8
+    continue: false
+  - enabled: false
+    when: distro == rhel-alt-7
+    continue: false
+extra-nitrate: TC#0607393
+extra-summary: /CoreOS/libcap/Sanity/New-pam_cap-configuration-support
+extra-task: /CoreOS/libcap/Sanity/New-pam_cap-configuration-support

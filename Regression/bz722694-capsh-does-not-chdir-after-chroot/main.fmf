@@ -1,0 +1,44 @@
+summary: Checks if capsh does chdir to root after chroot
+description: |
+    Bugzilla: https://bugzilla.redhat.com/show_bug.cgi?id=722694
+
+    Description of problem:
+    The capsh program has a --chroot commandline option. Inspecting the code shows
+    that it does not do a chdir("/") after calling chroot. This means that '.' is
+    outside the chroot.
+
+    Additional info:
+    http://cwe.mitre.org/data/definitions/243.html
+
+    Test scenario:
+    1. Create chroot environment in a directory (CHROOTDIR)
+    2. Run bash in the chroot
+    # capsh --chroot=$CHROOTDIR --
+    3. Run pwd and check the current directory (should be /)
+    # pwd
+    Test Case Relevancy:
+    distro = rhel-3, rhel-4, rhel-5: False
+contact: Ondrej Moris <omoris@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+recommend:
+  - libcap
+  - expect
+  - policycoreutils
+  - selinux-policy-devel
+duration: 20m
+enabled: true
+tag:
+  - CI-Tier-1
+  - TIPpass_Security
+  - Tier2
+  - Tier2security
+  - rhel-6.2
+tier: '2'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=722694
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1464371
+extra-nitrate: TC#0108892
+extra-summary: /CoreOS/libcap/Regression/bz722694-capsh-does-not-chdir-after-chroot
+extra-task: /CoreOS/libcap/Regression/bz722694-capsh-does-not-chdir-after-chroot

@@ -1,0 +1,20 @@
+
+module bz722694 1.1;
+
+require {
+	type useradd_t;
+	type device_t;
+	type groupadd_t;
+	type setfiles_t;
+	class file write;
+	class file ioctl;
+}
+
+#============= groupadd_t ==============
+allow groupadd_t device_t:file { write ioctl };
+
+#============= setfiles_t ==============
+allow setfiles_t device_t:file write;
+
+#============= useradd_t ==============
+allow useradd_t device_t:file { write ioctl };

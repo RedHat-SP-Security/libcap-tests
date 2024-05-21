@@ -1,0 +1,35 @@
+summary: Test for BZ#1425490 (Missing libcap.pc)
+description: |
+    Bug summary: Missing libcap.pc
+    Bugzilla link: https://bugzilla.redhat.com/show_bug.cgi?id=1425490
+
+    Checking the presence and sanity of the libcap.pc file.
+contact: Ondrej Moris <omoris@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+recommend:
+  - libcap
+  - libcap-devel
+  - pkgconfig
+duration: 5m
+enabled: true
+tag:
+  - CI-Tier-1
+  - NoRHEL4
+  - NoRHEL5
+  - NoRHEL6
+  - TIPpass_Security
+  - Tier1
+  - Tier1security
+  - TierCandidatesPASS
+tier: '1'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1425490
+adjust:
+  - enabled: false
+    when: distro == rhel-4, rhel-5, rhel-6
+    continue: false
+extra-nitrate: TC#0548571
+extra-summary: /CoreOS/libcap/Sanity/pkg-config-libcap-pc-addition
+extra-task: /CoreOS/libcap/Sanity/pkg-config-libcap-pc-addition

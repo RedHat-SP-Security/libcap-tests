@@ -1,0 +1,25 @@
+summary: test basic functionality
+description: ''
+contact: Ondrej Moris <omoris@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+recommend:
+  - libcap
+duration: 5m
+enabled: true
+tag:
+  - CI-Tier-1
+  - NoRHEL4
+  - NoRHEL5
+  - TIPpass_Security
+  - Tier1
+  - Tier1security
+tier: '1'
+adjust:
+  - enabled: false
+    when: distro == rhel-4, rhel-5
+    continue: false
+extra-nitrate: TC#0548539
+extra-summary: /CoreOS/libcap/Sanity/setcap-getcap-basic-functionality
+extra-task: /CoreOS/libcap/Sanity/setcap-getcap-basic-functionality

@@ -1,0 +1,33 @@
+summary: Compile the C code with capability.h and check presence of capabilities.
+description: ''
+contact: Martin Zelený <mzeleny@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+recommend:
+  - libcap
+  - libcap-devel
+  - gcc
+duration: 10m
+enabled: true
+tag:
+  - NoRHEL6
+  - NoRHEL7
+  - Tier1
+tier: '1'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1921576
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1946982
+adjust:
+  - enabled: false
+    when: distro < rhel-8
+    continue: false
+  - enabled: false
+    when: distro ~< rhel-8.5
+    continue: false
+  - enabled: false
+    when: distro == rhel-alt-7
+    continue: false
+extra-nitrate: TC#0611630
+extra-summary: /CoreOS/libcap/Regression/check-cap-definitions
+extra-task: /CoreOS/libcap/Regression/check-cap-definitions

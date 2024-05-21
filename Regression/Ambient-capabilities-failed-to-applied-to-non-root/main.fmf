@@ -1,0 +1,34 @@
+summary: Test that ambient capabilities applies to non-root user even when correct
+    rules are in /etc/security/capability.conf
+description: ''
+contact: Martin Zelený <mzeleny@redhat.com>
+component:
+  - libcap
+test: ./runtest.sh
+require:
+  - library(distribution/testUser)
+recommend:
+  - libcap
+  - ed
+  - util-linux
+duration: 10m
+enabled: true
+tag:
+  - CI-Tier-1
+  - NoRHEL6
+  - NoRHEL7
+  - Tier1
+tier: '1'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1950187
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=2037215
+adjust:
+  - enabled: false
+    when: distro <= rhel-7
+    continue: false
+  - enabled: false
+    when: distro == rhel-alt-7
+    continue: false
+extra-nitrate: TC#0612870
+extra-summary: /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
+extra-task: /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
