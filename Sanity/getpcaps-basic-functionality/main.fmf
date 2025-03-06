@@ -15,6 +15,7 @@ tag:
   - TIPpass_Security
   - Tier1
   - Tier1security
+  - ImageMode
 tier: '1'
 link:
   - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1432878
