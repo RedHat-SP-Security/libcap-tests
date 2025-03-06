@@ -23,6 +23,7 @@ tag:
   - Tier1
   - Tier1security
   - TierCandidatesPASS
+  - ImageMode
 tier: '1'
 link:
   - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1425490
