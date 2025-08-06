@@ -1,5 +1,5 @@
-summary: Test that ambient capabilities applies to non-root user even when correct
-    rules are in /etc/security/capability.conf
+summary: Test that ambient capabilities applies to non-root user even when 
+    correct rules are in /etc/security/capability.conf
 description: ''
 contact: Martin Zelený <mzeleny@redhat.com>
 component:
@@ -30,5 +30,8 @@ adjust:
     when: distro == rhel-alt-7
     continue: false
 extra-nitrate: TC#0612870
-extra-summary: /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
-extra-task: /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
+extra-summary: 
+    /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
+extra-task: 
+    /CoreOS/libcap/Regression/Ambient-capabilities-failed-to-applied-to-non-root
+id: 05d25f39-b28c-474b-af89-d6770afadff7
