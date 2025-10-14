@@ -40,5 +40,7 @@ link:
   - relates: https://bugzilla.redhat.com/show_bug.cgi?id=722694
   - relates: https://bugzilla.redhat.com/show_bug.cgi?id=1464371
 extra-nitrate: TC#0108892
-extra-summary: /CoreOS/libcap/Regression/bz722694-capsh-does-not-chdir-after-chroot
+extra-summary: 
+    /CoreOS/libcap/Regression/bz722694-capsh-does-not-chdir-after-chroot
 extra-task: /CoreOS/libcap/Regression/bz722694-capsh-does-not-chdir-after-chroot
+id: b7ff5be8-9e4d-47e3-aef2-cc8769872765

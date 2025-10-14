@@ -1,4 +1,5 @@
-summary: Compile the C code with capability.h and check presence of capabilities.
+summary: Compile the C code with capability.h and check presence of 
+    capabilities.
 description: ''
 contact: Martin Zelený <mzeleny@redhat.com>
 component:
@@ -31,3 +32,4 @@ adjust:
 extra-nitrate: TC#0611630
 extra-summary: /CoreOS/libcap/Regression/check-cap-definitions
 extra-task: /CoreOS/libcap/Regression/check-cap-definitions
+id: aa7920d3-046f-47ec-a5c0-dbc15f52ce9e
