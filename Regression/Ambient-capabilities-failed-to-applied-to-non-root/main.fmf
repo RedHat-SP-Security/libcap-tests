@@ -1,6 +1,9 @@
 summary: Test that ambient capabilities applies to non-root user even when 
     correct rules are in /etc/security/capability.conf
-description: ''
+description: |
+    Verify that ambient capabilities are correctly applied to a non-root user
+    when pam_cap.so is configured with keepcaps and defer options, and the user
+    has a ^cap_setpcap entry in /etc/security/capability.conf.
 contact: Martin Zelený <mzeleny@redhat.com>
 component:
   - libcap

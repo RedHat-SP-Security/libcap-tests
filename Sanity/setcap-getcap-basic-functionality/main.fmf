@@ -1,5 +1,8 @@
 summary: test basic functionality
-description: ''
+description: |
+    Verify that setcap and getcap correctly set, get, and remove file
+    capabilities, including stdin input mode, quiet mode, recursive listing,
+    verbose output, and proper error handling.
 contact: Ondrej Moris <omoris@redhat.com>
 component:
   - libcap

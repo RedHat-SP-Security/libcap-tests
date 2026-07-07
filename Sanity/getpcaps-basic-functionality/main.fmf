@@ -1,5 +1,8 @@
 summary: test basic functionality
-description: ''
+description: |
+    Verify that getpcaps correctly reports the capability sets of running
+    processes by querying multiple PIDs and checking the output for expected
+    capabilities.
 contact: Ondrej Moris <omoris@redhat.com>
 component:
   - libcap

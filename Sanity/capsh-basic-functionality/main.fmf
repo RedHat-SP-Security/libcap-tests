@@ -1,5 +1,8 @@
 summary: tests basic functionality
-description: ''
+description: |
+    Verify that capsh correctly handles its command-line options including
+    --drop, --caps, --inh, --user, --uid, --gid, --groups, --keep, --decode,
+    and --supports for both root and regular users.
 contact: Ondrej Moris <omoris@redhat.com>
 component:
   - libcap

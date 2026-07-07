@@ -1,6 +1,9 @@
 summary: 'New pam_cap configuration support in /etc/security/capability.conf is correctly
     recognized: @group, ^cap_foo, !cap_bar'
-description: ''
+description: |
+    Verify that pam_cap.so correctly handles the extended capability.conf
+    syntax including per-user assignment, @group-based assignment, ^ (inherit)
+    modifier, and ! (deny) modifier for capability configuration.
 contact: Martin Zelený <mzeleny@redhat.com>
 component:
   - libcap

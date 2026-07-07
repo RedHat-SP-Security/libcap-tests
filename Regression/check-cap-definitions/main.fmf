@@ -1,6 +1,9 @@
 summary: Compile the C code with capability.h and check presence of 
     capabilities.
-description: ''
+description: |
+    Verify that capability.h from libcap-devel provides the CAP_BPF,
+    CAP_PERFMON, and CAP_CHECKPOINT_RESTORE macro definitions by compiling
+    and running a C program that checks for their presence.
 contact: Martin Zelený <mzeleny@redhat.com>
 component:
   - libcap
