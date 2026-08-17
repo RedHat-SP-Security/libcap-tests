@@ -1,0 +1,4 @@
+PURPOSE of /CoreOS/libcap/Regression/RHEL-1843-improve-capsh-print-output
+Description: This test verifies the improved output of the `capsh --print` command as requested in RHEL-1843. It ensures that when all capabilities are set, the output is clear and not misleading, using keywords like "all" and "none".
+Author: QE Automation <sec-eng-special@redhat.com>
+Bug: https://issues.redhat.com/browse/RHEL-1843
