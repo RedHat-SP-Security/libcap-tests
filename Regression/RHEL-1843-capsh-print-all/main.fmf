@@ -1,9 +1,8 @@
-summary: Test for RHEL-1843 - capsh --print should use "all" for full capability sets
+summary: Test for RHEL-1843 - capsh --print should use 'all' and 'none' for capabilities
 description: |
     Bug: https://issues.redhat.com/browse/RHEL-1843
-    This test verifies that the `capsh --print` command now uses the keyword "all"
-    to represent a full set of capabilities, and "none" for an empty set,
-    making the output more intuitive and less prone to misinterpretation.
+    This test verifies that the `capsh --print` command uses the keywords 'all'
+    and 'none' to represent full or empty capability sets, as requested by the RFE.
 contact: QE Automation <sec-eng-special@redhat.com>
 test: ./runtest.sh
 framework: beakerlib
@@ -11,8 +10,8 @@ recommend:
     - libcap
 duration: 5m
 tag:
-    - rhel-9
-    - rhel-10
+    - Tier1
+    - Tier2
 adjust:
     - enabled: false
       when: distro < rhel-9.9
