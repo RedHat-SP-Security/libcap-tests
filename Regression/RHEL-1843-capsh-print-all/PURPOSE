@@ -1,0 +1,4 @@
+PURPOSE of /CoreOS/libcap/Regression/RHEL-1843-capsh-print-all
+Description: This test verifies the improved output of the `capsh --print` command as requested in RHEL-1843. It ensures that full capability sets are represented by the keyword "all" and empty sets by "none".
+Author: QE Automation <sec-eng-special@redhat.com>
+Bug: https://issues.redhat.com/browse/RHEL-1843
