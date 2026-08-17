@@ -1,0 +1,19 @@
+summary: Test for RHEL-1843 - Improve capabilities presentation layer for capsh --print command
+description: |
+    Bug: https://issues.redhat.com/browse/RHEL-1843
+    This test verifies that the `capsh --print` command output is improved as per the RFE.
+    It checks that "all=ep" is printed instead of "=ep", and that the "Bounding set"
+    and "Ambient set" are printed correctly when all capabilities are set.
+contact: QE Automation <sec-eng-special@redhat.com>
+test: ./runtest.sh
+framework: beakerlib
+recommend:
+    - libcap
+duration: 5m
+tag:
+    - rhel-9
+    - libcap
+adjust:
+    - enabled: false
+      when: distro < rhel-9.9
+      continue: false
