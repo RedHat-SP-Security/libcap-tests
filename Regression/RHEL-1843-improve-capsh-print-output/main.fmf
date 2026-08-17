@@ -1,0 +1,20 @@
+summary: Test for RHEL-1843 - Improve capabilities presentation layer for capsh --print command
+description: |
+    Bug: https://issues.redhat.com/browse/RHEL-1843
+    Verify that the `capsh --print` command provides a more intuitive and
+    explicit output when all capabilities are set. The test checks that the
+    output uses keywords like "all" and "none" to avoid misinterpretation.
+contact: QE Automation <sec-eng-special@redhat.com>
+test: ./runtest.sh
+framework: beakerlib
+recommend:
+    - libcap
+duration: 5m
+tag:
+    - Tier1
+    - CI-Tier-1
+    - libcap
+adjust:
+    - enabled: false
+      when: distro < rhel-9.9
+      continue: false
